@@ -11,22 +11,15 @@ import {Platform, StyleSheet, Text, View,Button} from 'react-native';
 import { AppRegistry } from 'react-native';
 import Carousel from "react-native-carousel-control";
 import LoginCarousel from "./src/components/LoginCarousel";
-
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+import LoginScreen from './src/components/LoginScreen';
+import Menu from './src/components/Menu';
+export default class App extends Component {
   render() {
     return (
+
       <View style={styles.container}>
 
-          <LoginCarousel/>
+          <Menu/>
 
       </View>
 
@@ -59,4 +52,5 @@ const styles = StyleSheet.create({
         borderRadius: 5
     }
 });
+
 AppRegistry.registerComponent('ComponentDemo', () => LoginCarousel);
